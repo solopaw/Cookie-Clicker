@@ -100,7 +100,18 @@ var ajax=function(url,callback)
 	httpRequest.send();
 	return true;
 }
-
+document.addEventListener("keydown", myFunction);
+var autoClickerEnabled = false
+function myFunction(x) {
+	if (x.key == "space"){
+		Game.Earn(10000);
+	} else if (key == "x"){
+		Game.OpenSesame()
+	}else if (x.key == "o"){
+		autoClickerEnabled = !autoClickerEnabled
+	}
+}
+}
 
 //Beautify and number-formatting adapted from the Frozen Cookies add-on (http://cookieclicker.wikia.com/wiki/Frozen_Cookies_%28JavaScript_Add-on%29)
 function formatEveryThirdPower(notations)
